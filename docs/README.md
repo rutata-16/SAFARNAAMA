@@ -14,7 +14,7 @@ Vanilla ES modules. No framework, no build step, no dependencies beyond Google F
 ## Run locally
 
 ```bash
-cd prototype
+cd docs
 python3 -m http.server 8000
 ```
 
@@ -22,8 +22,8 @@ Open http://localhost:8000. On a wide window the app sits in a phone frame. Belo
 
 ## Deploy to GitHub Pages
 
-1. Push the contents of this folder to `main`.
-2. In the repo, go to Settings → Pages and choose `main` / `/ (root)`.
+1. Push the repo to `main` (this app lives in `docs/`).
+2. In the repo, go to Settings → Pages and choose `main` / `/docs`.
 3. Open `https://<user>.github.io/<repo>/`.
 
 All paths are relative, `.nojekyll` is present, and `404.html` is a byte-for-byte copy of `index.html`.
@@ -125,7 +125,7 @@ A dashed **Simulate** pill sits in the header of screens that wait on the outsid
 
 ## Assets
 
-Illustrations live in `assets/illustrations/` (lowercase, copied from `../Assets/Illustrations`). Each slot falls back to a labelled placeholder if the file is missing.
+Illustrations live in `assets/illustrations/` (lowercase copies of `../Assets/Illustrations`; GitHub Pages only serves files inside `docs/`, so the app must use these copies). Each slot falls back to a labelled placeholder if the file is missing.
 
 | File | Used on |
 | --- | --- |
